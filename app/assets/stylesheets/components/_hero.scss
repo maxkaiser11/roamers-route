@@ -1,0 +1,83 @@
+.hero{
+  height: 95vh;
+  /* Credit image : Unsplash - Luke Chesser */
+  background: linear-gradient(-225deg, rgba(250, 130, 50, 0.18) 0%, rgba(245, 142, 63, 0.236) 50%), url('https://c4.wallpaperflare.com/wallpaper/559/691/625/landscape-abstract-red-mountains-wallpaper-preview.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header {
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  bottom: 50%;
+  margin-left: 150px;
+  color: #431407;
+}
+
+.hero-text {
+  width: 300px;
+  text-align: justify;
+}
+
+.hero-btn {
+  background-color: #f97316;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero-btn {
+  font-family: inherit;
+  font-size: 15px;
+  background: #f97316;
+  color: #fff;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.hero-btn span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-btn svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(62deg) brightness(105%) contrast(104%);
+}
+
+.hero-btn:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.hero-btn:hover svg {
+  transform: translateX(3em) scale(1.4);
+}
+
+.hero-btn:hover span {
+  transform: translateX(10em);
+}
+
+.hero-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
