@@ -23,12 +23,7 @@
 
 .hero-btn {
   background-color: #f97316;
-  padding: 5px;
-  border-radius: 5px;
   text-decoration: none;
-}
-
-.hero-btn {
   font-family: inherit;
   font-size: 15px;
   background: #f97316;
@@ -41,7 +36,9 @@
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.2s;
+  width: 150px;
 }
+
 
 .hero-btn span {
   display: block;
@@ -61,7 +58,7 @@
 }
 
 .hero-btn:hover svg {
-  transform: translateX(3em) scale(1.4);
+  transform: translateX(3.4em) scale(1.4);
 }
 
 .hero-btn:hover span {
