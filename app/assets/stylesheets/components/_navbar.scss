@@ -2,6 +2,8 @@
   justify-content: space-between;
   background: transparent;
   height: 5vh;
+  // background: #fb923c;
+  // height: 5vh;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,7 +12,6 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
-  background-color: #ffffff;
 }
 
 .nav-link {
@@ -21,4 +22,14 @@
 
 .navbar-nav {
   --bs-nav-link-hover-color: #431407;
+}
+
+.transparent-navbar {
+  background-color: transparent;
+  // backdrop-filter: blur(2px); /* Optional: Adds a blur effect to the background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }

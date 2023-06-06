@@ -12,7 +12,9 @@
 
   <body class="h-100 d-flex flex-column">
     <main class="flex-shrink-0">
-      <%= render "shared/navbar" %>
+      <% if user_signed_in? %>
+        <%= render "shared/navbar" %>
+      <% end %>
       <%= render "shared/flashes" %>
       <%= yield %>
     </main>
