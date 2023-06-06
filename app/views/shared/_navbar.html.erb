@@ -1,4 +1,5 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-dark shadow-5-strong navbar-lewagon transparent-navbar">
+  <%# Container wrapper %>
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://www.seekpng.com/png/full/4-46391_mountain-png-mountain-logo-transparent-background.png" %>
@@ -9,7 +10,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <% if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "Planner", "#", class: "nav-link" %>
