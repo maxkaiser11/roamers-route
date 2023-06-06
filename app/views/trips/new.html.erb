@@ -1,0 +1,14 @@
+
+
+<div class="container d-flex flex-column align-items-center">
+<h1>New Trip</h1>
+  <%= simple_form_for @trip, html: {class: "simple-form"} do |f| %>
+    <%= f.input :destination %>
+    <%= f.input :budget %>
+    <%= f.input :group_size %>
+    <%= f.input :interests %>
+    <%= f.input :starts_on, as: :date %>
+    <%= f.input :ends_on, as: :date %>
+    <%= f.button :submit %>
+<% end %>
+</div>
