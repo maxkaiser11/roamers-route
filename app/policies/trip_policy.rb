@@ -2,12 +2,16 @@ class TripPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
-      scope.all
+      scope.where(user_id: user)
     end
   end
 
+  def index?
+    record.user == user
+  end
+
   def show?
-    true
+    record.user == user
   end
 
   def new?

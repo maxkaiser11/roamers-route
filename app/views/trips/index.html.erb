@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>My Trips</h1>
+
+  <% @trips.each do |trip| %>
+    <div class="container">
+      <h1><%= trip.destination %></h1>
+    </div>
+  <% end %>
+</div>

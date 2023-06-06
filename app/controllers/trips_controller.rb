@@ -1,5 +1,10 @@
 class TripsController < ApplicationController
 
+  def index
+    @trips = policy_scope(Trip)
+    # authorize @trip
+  end
+
   def new
     @trip = Trip.new
     authorize @trip
@@ -12,7 +17,7 @@ class TripsController < ApplicationController
     authorize @trip
 
     if @trip.save
-      redirect_to root_path
+      redirect_to trip_path
     else
       render :new, status: :unprocessable_entity
     end

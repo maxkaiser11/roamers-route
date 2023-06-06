@@ -1,17 +1,25 @@
 .hero{
-  height: 100vh;
+ height: calc(100vh + 48px);
+ margin-top: -64px;
+ display: flex;
+ align-items: center;
   /* Credit image : Unsplash - Luke Chesser */
   background: linear-gradient(-225deg, rgba(250, 130, 50, 0.18) 0%, rgba(245, 142, 63, 0.236) 50%), url('https://c4.wallpaperflare.com/wallpaper/559/691/625/landscape-abstract-red-mountains-wallpaper-preview.jpg');
   background-size: cover;
   background-position: center;
-  position: relative;
+  // position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+
+.background-img {
+
 }
 
 .header {
   text-align: left;
-  position: absolute;
-  top: 20%;
-  bottom: 50%;
+  // position: relative;
   margin-left: 150px;
   color: #431407;
 }

@@ -1,7 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
-  height: 5vh;
+  // background-color: transparent;
   // background: #fb923c;
   // height: 5vh;
 }
@@ -27,7 +26,7 @@
 .transparent-navbar {
   background-color: transparent;
   // backdrop-filter: blur(2px); /* Optional: Adds a blur effect to the background */
-  position: absolute;
+  // position: absolute;
   top: 0;
   left: 0;
   right: 0;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-100">
+<html>
   <head>
     <title>RoamersRoute</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,7 +9,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="h-100 d-flex flex-column">
+  <body class="d-flex flex-column">
     <main class="flex-shrink-0">
       <% if user_signed_in? %>
         <%= render "shared/navbar" %>
