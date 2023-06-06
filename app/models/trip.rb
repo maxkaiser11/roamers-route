@@ -6,7 +6,7 @@ class Trip < ApplicationRecord
   def prompt
     %(I want to travel to #{destination} with a budget of #{budget} euros per day. I am traveling with #{group_size}
       people, our interests are: #{interests}. We want to start our trip on #{starts_on} and end our trip on #{ends_on}
-      return the answer in the markdown format)
+      return the activities in a markdown format and use markdown table wherever possible. Structure the response into the following sections: Details, Estimated Expenses, itinerary. Please also format the dates in a nicer way and remove the year)
   end
 
   def request_trip_details
@@ -16,7 +16,7 @@ class Trip < ApplicationRecord
         parameters: {
             model: "gpt-3.5-turbo", # Required.
             messages: [{ role: "user", content: prompt}], # Required.
-            temperature: 0.7,
+            temperature: 0.5,
         })
       response.dig("choices", 0, "message", "content")
     else

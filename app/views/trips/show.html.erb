@@ -1,3 +1,6 @@
-<h1>Trip</h1>
-
-<p>1<%= @trip.response %></p>
+<div class="container">
+  <h1>Trip</h1>
+  <div class="markdown-body">
+    <%= markdown(@trip.response || "No itinierary available") %>
+  </div>
+</div>
