@@ -81,3 +81,5 @@ group :test do
 end
 
 gem "pundit", "~> 2.3"
+
+gem "redcarpet", "~> 3.6"
