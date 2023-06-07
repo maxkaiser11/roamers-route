@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-  before_action :set_trip, only: %i[show edit update]
+  before_action :set_trip, only: %i[show edit update destroy]
 
   def index
     @trips = policy_scope(Trip)
@@ -35,6 +35,12 @@ class TripsController < ApplicationController
     authorize @trip
     EditTripDetailsJob.perform_later(@trip, changes_param[:trip_changes])
     redirect_to trip_path(@trip)
+  end
+
+  def destroy
+    authorize @trip
+    @trip.destroy
+    redirect_to trips_path, status: :see_other
   end
 
   private

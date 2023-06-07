@@ -16,6 +16,7 @@
       <%= markdown(@trip.response) %>
     <% end %>
     <%= link_to 'Edit Trip', edit_trip_path, class: "button" %>
+    <%= link_to 'Delete Trip', delete_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "button" %>
   </div>
 </div>
 
