@@ -48,6 +48,9 @@ gem "sassc-rails"
 #openai
 gem "ruby-openai"
 
+# Use images from Unsplash
+gem "unsplash"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

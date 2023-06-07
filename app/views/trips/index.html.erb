@@ -1,8 +1,8 @@
 
 <h1>My Trips</h1>
-<ul>
+<ul class="d-flex justify-content-evenly">
   <% @trips.each do |trip| %>
-    <li class="booking-card" style="background-image: url(https://images.unsplash.com/photo-1578944032637-f09897c5233d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ)">
+    <li class="booking-card" style="background-image: url(<%= trip.image_url %>)">
       <div class="book-container">
         <div class="content">
           <%= link_to "Show", trip_path(trip), class: "btn" %>
@@ -28,7 +28,7 @@
                 <i class="fa-solid fa-person icon"></i>
                 <i class="fa-solid fa-person icon"></i>
               <% else %>
-                <i class="fa-solid fa-users icon"></i>
+                <i class="fa-solid fa-users icon fa-2x"></i>
               <% end %>
             </div>
             <div class="box date">
@@ -38,7 +38,7 @@
               <p><%= trip.starts_on.strftime("%e %b %y") %> -<br><%= trip.ends_on.strftime("%e %b %y") %></p>
             </div>
           </div>
-          <p class="disclaimer">Probably image credits from the unsplash API</p>
+          <p class="disclaimer"><%== trip.image_credit %></p>
         </div>
       </div>
     </li>
