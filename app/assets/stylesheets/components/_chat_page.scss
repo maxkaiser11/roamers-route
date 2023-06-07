@@ -1,0 +1,96 @@
+.form-header {
+  margin-bottom: 10px;
+}
+
+#new_trip .form-control {
+  width: 10em;
+  padding-right: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+#new_trip{
+  width: 70%;
+}
+
+#new-trip .form-label {
+  margin-left: 0;
+}
+
+#new_trip .input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chat-box .mb-3 {
+  overflow: auto;
+  display: flex;
+}
+
+.chat-label {
+  width: fit-content;
+  background-color: rgba(255, 106, 0, 0.556);
+  padding: 10px;
+  border-radius: 500px;
+
+}
+
+#new_trip input {
+  max-width: 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: auto;
+  background-color: rgba(255, 138, 54, 0.359);
+  border: none;
+  text-align: right;
+  background-clip: padding-box;
+}
+
+#new_trip #trip-starts-on {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 0; /* Removendo a margem direita */
+  margin-left: auto;
+  background-color: rgba(255, 138, 54, 0.359);
+  border: none;
+  text-align: right;
+  background-clip: padding-box;
+  padding-right: 2px; /* Ajuste o valor do padding direito conforme necessário */
+}
+
+
+
+
+#new_trip input:focus{
+  background-color: rgba(255, 138, 54, 0.359);
+}
+
+
+.answer-container{
+  position: relative;
+  height: fit-content;
+}
+
+.dates-trip {
+
+}
+
+
+.submit-btn{
+  background-color: white !important;
+  color: black;
+  width: fit-content !important;
+
+}
