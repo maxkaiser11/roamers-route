@@ -5,11 +5,11 @@
   <%= simple_form_for @trip, html: {class: "simple-form input-field", data: {controller:"chat"}} do |f| %>
 
     <div class="message-container">
-      <%= f.label :destination, 'Wher do you want to go?', class:"chat-label" %>
+      <%= f.label :destination, 'Where do you want to go?', class:"chat-label" %>
       <%= f.input :destination, class: "destination-field", label: false%>
     </div>
     <div class="message-container">
-      <%= f.label :budget, 'What is your budget(€) for this trip?', class:"chat-label" %>
+      <%= f.label :budget, 'What is your budget per day (€) for this trip?', class:"chat-label" %>
       <%= f.input :budget, class: "budget-field", label: false %>
     </div>
 
@@ -19,7 +19,7 @@
     </div>
 
     <div class="message-container">
-      <%= f.label :interests, 'What do you plan to focus on during the trip?', class:"chat-label" %>
+      <%= f.label :interests, 'What do you plan to do on during the trip?', class:"chat-label" %>
       <%= f.input :interests, class: "interests-field", label: false %>
     </div>
 

@@ -1,17 +1,12 @@
 <div class="container markdown">
   <div class="markdown-body">
     <% if @trip.response.blank? %>
-      <div class="wrap">
+      <div class="wrap" data-controller="reload">
         <div class="loading">
           <div class="bounceball"></div>
           <div class="text">CREATING YOUR ITINERARY</div>
         </div>
       </div>
-      <script>
-        setTimeout(function(){
-          window.location.reload(1);
-        }, 2000);
-      </script>
     <% else %>
       <%= markdown(@trip.response) %>
     <% end %>
