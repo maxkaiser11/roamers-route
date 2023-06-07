@@ -1,14 +1,21 @@
 <div class="container markdown">
   <div class="markdown-body">
     <% if @trip.response.blank? %>
-      <div class="container text-center">
-        <h4>We are working our Magic</h4>
-        <div class="spinner container"></div>
-        <p>This can take a few minutes</p>
+      <div class="wrap">
+        <div class="loading">
+          <div class="bounceball"></div>
+          <div class="text">CREATING YOUR ITINERARY</div>
+        </div>
       </div>
+      <script>
+        setTimeout(function(){
+          window.location.reload(1);
+        }, 2000);
+      </script>
     <% else %>
       <%= markdown(@trip.response) %>
     <% end %>
+    <%= link_to 'Edit Trip', edit_trip_path, class: "button" %>
   </div>
 </div>
 
