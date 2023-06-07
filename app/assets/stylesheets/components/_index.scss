@@ -8,3 +8,15 @@
 @import "simple_form";
 @import "markdown";
 @import "chat_page";
+@import "spinner";
+@import "button";
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}

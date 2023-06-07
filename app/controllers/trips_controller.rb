@@ -1,8 +1,13 @@
 class TripsController < ApplicationController
+  before_action :set_trip, only: %i[show edit update destroy]
 
   def index
     @trips = policy_scope(Trip)
     # authorize @trip
+  end
+
+  def show
+    authorize @trip
   end
 
   def new
@@ -13,7 +18,6 @@ class TripsController < ApplicationController
   def create
     @trip = Trip.new(trip_params)
     @trip.user = current_user
-    @trip.response = @trip.request_trip_details
     authorize @trip
 
     if @trip.save
@@ -23,14 +27,33 @@ class TripsController < ApplicationController
     end
   end
 
-  def show
-    @trip = Trip.find(params[:id])
+  def edit
     authorize @trip
+  end
+
+  def update
+    authorize @trip
+    EditTripDetailsJob.perform_later(@trip, changes_param[:trip_changes])
+    redirect_to trip_path(@trip)
+  end
+
+  def destroy
+    authorize @trip
+    @trip.destroy
+    redirect_to trips_path, status: :see_other
   end
 
   private
 
   def trip_params
     params.require(:trip).permit(:destination, :budget, :group_size, :interests, :starts_on, :ends_on)
+  end
+
+  def changes_param
+    params.require(:trip).permit(:trip_changes)
+  end
+
+  def set_trip
+    @trip = Trip.find(params[:id])
   end
 end
