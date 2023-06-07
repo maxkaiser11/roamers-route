@@ -2,7 +2,7 @@ class FetchTripDetailsJob < ApplicationJob
   queue_as :default
 
   def perform(trip)
-    if false
+    if true
       client = OpenAI::Client.new
       response = client.chat(
         parameters: {
