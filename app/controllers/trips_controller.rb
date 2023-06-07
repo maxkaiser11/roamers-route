@@ -18,7 +18,6 @@ class TripsController < ApplicationController
   def create
     @trip = Trip.new(trip_params)
     @trip.user = current_user
-    @trip.response = @trip.request_trip_details
     @trip.image_url = @trip.unsplash_image_url
     @trip.image_credit = @trip.unsplash_credit
     authorize @trip
