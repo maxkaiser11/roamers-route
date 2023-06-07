@@ -1,0 +1,10 @@
+
+<div class="container">
+  <h1>Edit your trip</h1>
+
+  <%= simple_form_for @trip, html: {class: "simple-form"} do |f| %>
+      <%= f.label :trip_changes, "Tell us what you would like to change" %>
+      <%= f.input :trip_changes, input_html: {value: ''} %>
+      <%= f.submit "Update", class: "button" %>
+  <% end %>
+</div>

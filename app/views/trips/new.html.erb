@@ -1,14 +1,87 @@
 
 
-<div class="container d-flex flex-column align-items-center">
-<h1>New Trip</h1>
-  <%= simple_form_for @trip, html: {class: "simple-form"} do |f| %>
-    <%= f.input :destination %>
-    <%= f.input :budget %>
-    <%= f.input :group_size %>
-    <%= f.input :interests %>
-    <%= f.input :starts_on, as: :date %>
-    <%= f.input :ends_on, as: :date %>
-    <%= f.button :submit %>
+<div class="container chat-box">
+  <h1 class="form-header">New Trip</h1>
+  <%= simple_form_for @trip, html: {class: "simple-form input-field"} do |f| %>
+
+    <div class="message-container">
+      <%= f.label :destination, 'Wher do you want to go?', class:"chat-label" %>
+      <%= f.input :destination, class: "destination-field", label: false%>
+    </div>
+    <div class="message-container">
+      <%= f.label :budget, 'What is your budget(€) for this trip?', class:"chat-label" %>
+      <%= f.input :budget, class: "budget-field", label: false %>
+    </div>
+
+    <div class="message-container">
+      <%= f.label :group_size, 'Including you, how many people are going?', class:"chat-label"%>
+      <%= f.input :group_size, class: "group-size-field", label: false %>
+    </div>
+
+    <div class="message-container">
+      <%= f.label :interests, 'What do you plan to focus on during the trip?', class:"chat-label" %>
+      <%= f.input :interests, class: "interests-field", label: false %>
+    </div>
+
+    <div class="message-container">
+      <%= f.label :starts_on, 'When do you want to go there?', class:"chat-label" %>
+      <%= f.input :starts_on, as: :date, html5: true, class: "starts-on-field", label: false %>
+    </div>
+
+    <div class="message-container">
+      <%= f.label :ends_on, 'When do you want to leave?', class:"chat-label" %>
+      <%= f.input :ends_on, as: :date, html5: true, class: "ends-on-field", label: false %>
+    </div>
+    <%= f.button :submit, class:"submit-btn" %>
 <% end %>
 </div>
+
+
+
+
+
+
+
+
+<script>
+
+    const dates = document.querySelectorAll(".trip_starts_on, .trip_ends_on");
+    dates.forEach(element => {
+      element.classList.add("d-flex", "justify-content-end", "dates-trip");
+
+    });
+
+  function showNextField() {
+    let count = 1;
+    const inputs = document.querySelectorAll(".form-control, .trip_starts_on>div, .trip_ends_on>div")
+
+
+      inputs.forEach(element => {
+        element.closest(".message-container").classList.add("d-none")
+
+      });
+
+      inputs[0].closest(".message-container").classList.remove("d-none");
+
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          if (count < inputs.length) {
+            event.preventDefault();
+            let previousInput = inputs[count-1];
+            let input = inputs[count];
+            if (previousInput.value == "") {
+
+            } else {
+              input.closest(".message-container").classList.remove("d-none");
+              count++;
+              input.focus();
+            };
+          };
+        }
+      });
+
+
+  }
+
+  showNextField();
+</script>

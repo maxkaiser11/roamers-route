@@ -21,4 +21,16 @@ class TripPolicy < ApplicationPolicy
   def create?
     new?
   end
+
+  def edit?
+    record.user == user
+  end
+
+  def update?
+    edit?
+  end
+
+  def destroy?
+    record.user == user
+  end
 end

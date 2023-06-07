@@ -1,5 +1,28 @@
 <div class="container markdown">
   <div class="markdown-body">
-    <%= markdown(@trip.response || "No itinierary available") %>
+    <% if @trip.response.blank? %>
+      <div class="wrap">
+        <div class="loading">
+          <div class="bounceball"></div>
+          <div class="text">CREATING YOUR ITINERARY</div>
+        </div>
+      </div>
+      <script>
+        setTimeout(function(){
+          window.location.reload(1);
+        }, 2000);
+      </script>
+    <% else %>
+      <%= markdown(@trip.response) %>
+    <% end %>
+    <%= link_to 'Edit Trip', edit_trip_path, class: "button" %>
+    <%= link_to 'Delete Trip', delete_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "button" %>
   </div>
 </div>
+
+
+
+
+
+
+<%# <%= markdown(@trip.response || "No itinierary available") %>
