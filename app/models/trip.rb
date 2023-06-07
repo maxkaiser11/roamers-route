@@ -21,4 +21,21 @@ class Trip < ApplicationRecord
   def edit_trip_details
     EditTripDetailsJob.perform_later(self)
   end
+
+  def unsplash_photo
+    @unsplash_photo ||= begin
+      result = Unsplash::Photo.random(count: 1, query: "#{destination} landmark", orientation: "portrait")
+      photo = result.first
+      photo.track_download
+      photo
+    end
+  end
+
+  def unsplash_credit
+    return %(Photo by <a href="#{unsplash_photo.user.links.html}">#{unsplash_photo.user.name}</a> on <a href="https://unsplash.com/?utm_source=your_app_name&utm_medium=referral">Unsplash</a>)
+  end
+
+  def unsplash_image_url
+    return unsplash_photo.urls.raw
+  end
 end
