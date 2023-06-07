@@ -1,5 +1,16 @@
 <div class="container markdown">
   <div class="markdown-body">
-    <%= markdown(@trip.response || "No itinierary available") %>
+    <% if @trip.response.blank? %>
+      <div class="spinner"></div>
+    <% else %>
+      <%= markdown(@trip.response) %>
+    <% end %>
   </div>
 </div>
+
+
+
+
+
+
+<%# <%= markdown(@trip.response || "No itinierary available") %>

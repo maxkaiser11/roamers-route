@@ -13,7 +13,6 @@ class TripsController < ApplicationController
   def create
     @trip = Trip.new(trip_params)
     @trip.user = current_user
-    @trip.response = @trip.request_trip_details
     authorize @trip
 
     if @trip.save
