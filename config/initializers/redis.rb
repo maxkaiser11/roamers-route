@@ -1,6 +1,6 @@
 $redis = Redis.new
 
-url = ENV["REDISCLOUD_URL"]
+url = ENV["REDIS_URL"]
 
 if url
   Sidekiq.configure_server do |config|
@@ -10,5 +10,5 @@ if url
   Sidekiq.configure_client do |config|
     config.redis = { url: url }
   end
-  $redis = Redis.new(url: url, ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
+  $redis = Redis.new(url: url)
 end
