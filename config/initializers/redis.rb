@@ -10,5 +10,5 @@ if url
   Sidekiq.configure_client do |config|
     config.redis = { url: url }
   end
-  $redis = Redis.new(:url => url)
+  $redis = Redis.new(url: url, ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
 end

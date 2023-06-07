@@ -1,7 +1,11 @@
 <div class="container markdown">
   <div class="markdown-body">
     <% if @trip.response.blank? %>
-      <div class="spinner"></div>
+      <div class="container text-center">
+        <h4>We are working our Magic</h4>
+        <div class="spinner container"></div>
+        <p>This can take a few minutes</p>
+      </div>
     <% else %>
       <%= markdown(@trip.response) %>
     <% end %>
