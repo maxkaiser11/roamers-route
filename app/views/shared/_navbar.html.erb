@@ -1,7 +1,7 @@
-<div class="navbar navbar-expand-sm navbar-dark shadow-5-strong navbar-lewagon transparent-navbar">
+<div class="navbar navbar-expand-sm navbar-dark shadow-5-strong navbar-lewagon transparent-navbar my-0 py-3">
   <%# Container wrapper %>
-  <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
+  <div class="container-fluid p-0">
+    <%= link_to root_path, class: "navbar-brand my-0" do %>
       <%= image_tag "logo-no-background.png" %>
     <% end %>
 
@@ -9,36 +9,33 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Planner", new_trip_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "My Trips", trips_path , class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 avatar">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
-          </a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+    <button class="btn bg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 avatar">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg></button>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <% if user_signed_in? %>
+        <%= link_to "Planner", new_trip_path, class: "nav-link" %>
+        <%= link_to "My Trips", trips_path , class: "nav-link" %>
+          <%= link_to "Action", "#", class: "dropdown-item" %>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
+          <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+        </div>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+      </li>
+    <% end %>
   </div>
 </div>
