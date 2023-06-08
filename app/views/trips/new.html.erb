@@ -5,7 +5,10 @@
   <%= simple_form_for @trip, html: {class: "simple-form input-field", data: {controller:"chat"}} do |f| %>
 
     <div class="message-container">
-      <%= f.label :destination, 'Where do you want to go?', class:"chat-label" %>
+      <div class="bot-message">
+        <%= f.label :destination, 'Hello, I am your personal itinerary planner!', class:"chat-label ai-greet" %>
+        <%= f.label :destination, 'Where do you want to go?', class:"chat-label" %>
+      </div>
       <%= f.input :destination, class: "destination-field", label: false%>
     </div>
     <div class="message-container">
@@ -24,15 +27,21 @@
     </div>
 
     <div class="message-container">
-      <%= f.label :starts_on, 'When do you want to go there?', class:"chat-label" %>
-      <%= f.input :starts_on, as: :date, html5: true, class: "starts-on-field", label: false %>
+      <%= f.label :starts_on, 'For how long would you like to go?', class:"chat-label" %>
+      <div class="dates">
+        <div class="inputs">
+          <h5 class="date-text">Arrival:</h5>
+          <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
+            <%= f.input :starts_on, as: :date, html5: true, class: "starts-on-field", label: false,  id: "starts-on" %>
+          </div>
+          <h5 class="date-text">Departure:</h5>
+          <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
+            <%= f.input :ends_on, as: :date, html5: true, class: "ends-on-field", label: false,  id: "ends-on" %>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="message-container">
-      <%= f.label :ends_on, 'When do you want to leave?', class:"chat-label" %>
-      <%= f.input :ends_on, as: :date, html5: true, class: "ends-on-field", label: false %>
-    </div>
-    <%= f.button :submit, class:"submit-btn" %>
+    <%= f.button :submit, class:"submit-btn d-none" %>
 <% end %>
 </div>
 
@@ -45,15 +54,21 @@
 
 <script>
 
-    const dates = document.querySelectorAll(".trip_starts_on, .trip_ends_on");
-    dates.forEach(element => {
-      element.classList.add("d-flex", "justify-content-end", "dates-trip");
-
-    });
 
   function showNextField() {
     let count = 1;
-    const inputs = document.querySelectorAll(".form-control, .trip_starts_on>div, .trip_ends_on>div")
+    //const dates = document.querySelectorAll(".trip_starts_on, .trip_ends_on");
+    const dateEndInput = document.getElementById("trip_ends_on");
+    const dateStartInput = document.getElementById("trip_starts_on");
+    const inputs = document.querySelectorAll(".form-control, .trip_starts_on>div, .trip_ends_on>div");
+    const submitBtn = document.querySelector(".submit-btn");
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var inputElement = document.getElementById("trip_destination");
+
+      inputElement.focus();
+    });
+
 
 
       inputs.forEach(element => {
@@ -77,11 +92,19 @@
               input.focus();
             };
           };
-        }
+        };
+
+
       });
 
 
-  }
+
+      document.addEventListener('change', function () {
+        if (dateEndInput.value !== "" && dateStartInput.value !== ""){
+          submitBtn.classList.remove("d-none")
+        };
+      });
+  };
 
   showNextField();
 </script>

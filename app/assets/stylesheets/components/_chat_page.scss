@@ -50,6 +50,7 @@
   margin-top: 30px;
   margin-bottom: 30px;
   margin-right: 10px;
+  height: 36px;
   margin-left: auto;
   background-color: rgba(255, 138, 54, 0.359);
   border: none;
@@ -61,16 +62,30 @@
   width: 100%;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-right: 0; /* Removendo a margem direita */
+  margin-right: 0;
   margin-left: auto;
-  background-color: rgba(255, 138, 54, 0.359);
   border: none;
   text-align: right;
   background-clip: padding-box;
-  padding-right: 2px; /* Ajuste o valor do padding direito conforme necessário */
+  padding-right: 2px;
 }
 
 
+
+.background-date{
+  height:36px;
+  background-color: rgba(255, 138, 54, 0.359);
+  border-radius: 300px;
+}
+
+.bot-message{
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-greet{
+  margin-bottom: 10px;
+}
 
 
 #new_trip input:focus{
@@ -78,13 +93,13 @@
 }
 
 
+
+
+
+
 .answer-container{
   position: relative;
   height: fit-content;
-}
-
-.dates-trip {
-
 }
 
 
@@ -93,4 +108,44 @@
   color: black;
   width: fit-content !important;
 
+}
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.date-text {
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+.inputs {
+  width: fit-content;
+  margin-top: 20px;
+  ::-webkit-datetime-edit{
+    border-radius: 300px;
+  }
+  ::-webkit-datetime-edit-fields-wrapper{
+    border-radius: 300px;
+  }
+  ::-webkit-datetime-edit-text{
+
+  }
+  ::-webkit-datetime-edit-month-field{
+
+  }
+  ::-webkit-datetime-edit-day-field{
+
+  }
+  ::-webkit-datetime-edit-year-field{
+
+  }
+  ::-webkit-inner-spin-button{
+
+  }
+  ::-webkit-calendar-picker-indicator{
+
+  }
 }
