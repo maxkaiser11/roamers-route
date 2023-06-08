@@ -10,6 +10,7 @@
 @import "chat_page";
 @import "spinner";
 @import "button";
+@import "info_section";
 
 body {
   min-height: 100vh;
@@ -19,4 +20,8 @@ body {
 
 footer {
   margin-top: auto;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
 }

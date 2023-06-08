@@ -1,6 +1,6 @@
 .hero{
  height: calc(100vh + 48px);
- margin-top: -64px;
+ margin-top: -90px;
  display: flex;
  align-items: center;
   /* Credit image : Unsplash - Luke Chesser */
@@ -22,7 +22,9 @@
 
 .buttons {
   display: flex;
-  width: 300px;
+  width: 400px;
+  align-items: end;
+  height: 50px;
 }
 
 .homepage-btn {
@@ -50,6 +52,8 @@
   align-items: center;
   font-family: inherit;
   font-size: 15px;
+  height: 45px;
+  width: 150px;
  }
 
  .homepage-btn:disabled {
@@ -140,3 +144,4 @@
     transform: translateY(-0.1em);
   }
 }
+
