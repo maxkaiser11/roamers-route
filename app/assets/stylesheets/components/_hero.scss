@@ -1,8 +1,8 @@
 .hero{
- height: calc(100vh + 48px);
- margin-top: -90px;
- display: flex;
- align-items: center;
+  height: calc(100vh + 48px);
+  margin-top: -90px;
+  display: flex;
+  align-items: center;
   /* Credit image : Unsplash - Luke Chesser */
   background:  url('https://cdn.wallpapersafari.com/65/57/fOWaP0.jpg');
   background-size: cover;
@@ -144,4 +144,3 @@
     transform: translateY(-0.1em);
   }
 }
-
