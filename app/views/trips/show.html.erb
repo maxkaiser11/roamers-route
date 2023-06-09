@@ -1,23 +1,21 @@
-<div class="container markdown vh-100">
-  <div class="markdown-body">
-    <% if @trip.response.blank? %>
-      <div class="wrap" data-controller="reload">
-        <div class="loading">
-          <div class="bounceball"></div>
-          <div class="text">CREATING YOUR ITINERARY</div>
+<div class="timeline">
+  <div class="container markdown">
+    <div class="markdown-body">
+      <% if @trip.response.blank? %>
+        <div class="wrap" data-controller="reload">
+          <div class="loading">
+            <div class="bounceball"></div>
+            <div class="text">CREATING YOUR ITINERARY</div>
+          </div>
         </div>
-      </div>
-    <% else %>
-      <%= markdown(@trip.response) %>
+      <% else %>
+        <%= markdown(@trip.response) %>
+      <% end %>
       <%= link_to 'Edit Trip', edit_trip_path, class: "button" %>
       <%= link_to 'Delete Trip', delete_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "button" %>
-    <% end %>
+    </div>
   </div>
 </div>
-
-
-
-
 
 
 
