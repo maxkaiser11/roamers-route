@@ -18,8 +18,6 @@
     margin: 16px 32px;
   }
 
-
-
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
@@ -45,7 +43,7 @@
 
 
 .card {
-  background: #f4f3f3;
+  background: linear-gradient(to right, #f97316, #fbbf24);
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
@@ -53,10 +51,10 @@
   border-radius: 6px;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  //text-align: center;
   display: flex;
   font-size: 1.5em;
-  color: #431407;
+  color: #fff;
   cursor: pointer;
   font-family: cursive;
   display: flex;
