@@ -4,7 +4,7 @@
  display: flex;
  align-items: center;
   /* Credit image : Unsplash - Luke Chesser */
-  background: /*linear-gradient(-225deg, rgba(250, 130, 50, 0.18) 0%, rgba(245, 142, 63, 0.236) 50%)*/ url('https://www.demystify-ai.com/wp-content/uploads/2021/04/Hero-graphs-1.png');
+  background:  url('https://cdn.wallpapersafari.com/65/57/fOWaP0.jpg');
   background-size: cover;
   background-position: center;
   // position: absolute;
@@ -30,10 +30,10 @@
 .homepage-btn {
   appearance: none;
   background-color: transparent;
-  border: 0.125em solid #f97316;
+  border: 0.125em solid #ff451c;
   border-radius: 0.9375em;
   box-sizing: border-box;
-  color: #f97316;
+  color: #ff451c;
   cursor: pointer;
   display: flex;
   line-height: normal;
@@ -62,7 +62,7 @@
 
  .homepage-btn:hover {
   color: #fff;
-  background-color: #f97316;
+  background-color: #ff451c;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
  }
@@ -76,7 +76,7 @@
   text-align: left;
   // position: relative;
   margin-left: 150px;
-  color: #431407;
+  color: #fff7ed;
   // width: 600px;
 }
 
@@ -88,11 +88,11 @@
 
 
 .hero-btn {
-  background-color: #f97316;
+  background-color: #ff451c;
   text-decoration: none;
   font-family: inherit;
   font-size: 15px;
-  background: #f97316;
+  background: #ff451c;
   color: #fff;
   padding: 0.7em 1em;
   padding-left: 0.9em;
