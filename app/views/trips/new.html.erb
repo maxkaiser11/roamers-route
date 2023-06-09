@@ -31,11 +31,11 @@
       <div class="dates">
           <h5 class="date-text">Arrival:</h5>
           <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
-            <p class="triangle-user"><%= f.input :starts_on, as: :date, html5: true, class: "starts-on-field", label: false,  id: "starts-on" %></p>
+            <%= f.input :starts_on, as: :date, html5: true, class: "starts-on-field", label: false,  id: "starts-on" %>
           </div>
           <h5 class="date-text">Departure:</h5>
           <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
-            <p class="triangle-user"><%= f.input :ends_on, as: :date, html5: true, class: "ends-on-field", label: false,  id: "ends-on" %></p>
+            <%= f.input :ends_on, as: :date, html5: true, class: "ends-on-field", label: false,  id: "ends-on" %>
           </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
     //const dates = document.querySelectorAll(".trip_starts_on, .trip_ends_on");
     const dateEndInput = document.getElementById("trip_ends_on");
     const dateStartInput = document.getElementById("trip_starts_on");
-    const inputs = document.querySelectorAll(".form-control, .trip_starts_on>div, .trip_ends_on>div, .triangle-ai,. triangle-user");
+    const inputs = document.querySelectorAll(".form-control, .trip_starts_on>div, .trip_ends_on>div");
     const submitBtn = document.querySelector(".submit-btn");
 
     document.addEventListener("DOMContentLoaded", function() {
