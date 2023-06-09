@@ -2,7 +2,7 @@ class EditTripDetailsJob < ApplicationJob
   queue_as :default
 
   def perform(trip, changes)
-    if false
+    if true
       client = OpenAI::Client.new
       response = client.chat(
         parameters: {
