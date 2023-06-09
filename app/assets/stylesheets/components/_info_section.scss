@@ -5,6 +5,10 @@
     grid-gap: 16px;
   }
 
+  @media (max-width: 600px) {
+    .info-container { grid-template-columns: 1fr; }
+  }
+
   .info-text {
     margin: 0px 32px;
     font-size: 18px;
@@ -13,8 +17,6 @@
   .info-title {
     margin: 16px 32px;
   }
-
-
 
 @property --rotate {
   syntax: "<angle>";
@@ -40,14 +42,8 @@
 //}
 
 
-@media(max-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .card {
-  background: #fff7ed;
+  background: linear-gradient(to right, #f97316, #fbbf24);
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
@@ -55,10 +51,10 @@
   border-radius: 6px;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  //text-align: center;
   display: flex;
   font-size: 1.5em;
-  color: #431407;
+  color: #fff;
   cursor: pointer;
   font-family: cursive;
   display: flex;
@@ -66,10 +62,37 @@
   align-items: center;
   justify-content: center;
   //background-color: #fff;
-  height: 60%;
+  height: 50%;
   width: 50%;
   margin: auto;
 }
+
+
+
+  .feature-demo-img {
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: #431407;
+    cursor: pointer;
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //background-color: #fff;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+  }
+  
 
 //.card:hover {
 //  color: orange;
