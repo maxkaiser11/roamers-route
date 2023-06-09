@@ -10,13 +10,17 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 120px;
+  margin-left: 64px;
 }
 
 .nav-link {
-  // font-size: larger;
+  font-size: 20px;
   font-weight: bolder;
-  color: white;
+  color: #431407;
+  margin-left: 16px;
+  margin-right: 32px;
+  margin-top: 0;
 }
 
 .navbar-nav {
@@ -31,4 +35,11 @@
   left: 0;
   right: 0;
   z-index: 100;
+}
+
+.navbar-lewagon .avatar {
+  margin-left: 16px;
+  margin-right: 16px;
+  text-decoration: none;
+  color: #431407;
 }

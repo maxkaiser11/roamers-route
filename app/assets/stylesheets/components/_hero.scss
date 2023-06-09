@@ -1,10 +1,10 @@
 .hero{
  height: calc(100vh + 48px);
- margin-top: -64px;
+ margin-top: -90px;
  display: flex;
  align-items: center;
   /* Credit image : Unsplash - Luke Chesser */
-  background: linear-gradient(-225deg, rgba(250, 130, 50, 0.18) 0%, rgba(245, 142, 63, 0.236) 50%), url('https://c4.wallpaperflare.com/wallpaper/559/691/625/landscape-abstract-red-mountains-wallpaper-preview.jpg');
+  background: /*linear-gradient(-225deg, rgba(250, 130, 50, 0.18) 0%, rgba(245, 142, 63, 0.236) 50%)*/ url('https://www.demystify-ai.com/wp-content/uploads/2021/04/Hero-graphs-1.png');
   background-size: cover;
   background-position: center;
   // position: absolute;
@@ -12,22 +12,80 @@
   z-index: -1;
 }
 
+.hero-subtitle {
+  font-size: 48px;
+}
 
 .background-img {
 
 }
+
+.buttons {
+  display: flex;
+  width: 400px;
+  align-items: end;
+  height: 50px;
+}
+
+.homepage-btn {
+  appearance: none;
+  background-color: transparent;
+  border: 0.125em solid #f97316;
+  border-radius: 0.9375em;
+  box-sizing: border-box;
+  color: #f97316;
+  cursor: pointer;
+  display: flex;
+  line-height: normal;
+  margin: 0;
+  outline: none;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  margin-left: 8px;
+  align-items: center;
+  font-family: inherit;
+  font-size: 15px;
+  height: 45px;
+  width: 150px;
+ }
+
+ .homepage-btn:disabled {
+  pointer-events: none;
+ }
+
+ .homepage-btn:hover {
+  color: #fff;
+  background-color: #f97316;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+ }
+
+ .homepage-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+ }
 
 .header {
   text-align: left;
   // position: relative;
   margin-left: 150px;
   color: #431407;
+  // width: 600px;
 }
 
 .hero-text {
-  width: 300px;
-  text-align: justify;
+  width: 400px;
+  // text-align: justify;
+  font-size: 18px;
 }
+
 
 .hero-btn {
   background-color: #f97316;
@@ -86,3 +144,4 @@
     transform: translateY(-0.1em);
   }
 }
+

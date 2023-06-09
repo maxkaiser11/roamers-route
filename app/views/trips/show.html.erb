@@ -1,4 +1,4 @@
-<div class="container markdown">
+<div class="container markdown vh-100">
   <div class="markdown-body">
     <% if @trip.response.blank? %>
       <div class="wrap" data-controller="reload">
@@ -9,9 +9,9 @@
       </div>
     <% else %>
       <%= markdown(@trip.response) %>
+      <%= link_to 'Edit Trip', edit_trip_path, class: "button" %>
+      <%= link_to 'Delete Trip', delete_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "button" %>
     <% end %>
-    <%= link_to 'Edit Trip', edit_trip_path, class: "button" %>
-    <%= link_to 'Delete Trip', delete_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "button" %>
   </div>
 </div>
 

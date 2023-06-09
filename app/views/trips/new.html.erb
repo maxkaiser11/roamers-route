@@ -1,5 +1,5 @@
 
-
+<section class="chat-section">
 <div class="container chat-box">
   <h1 class="form-header">New Trip</h1>
   <%= simple_form_for @trip, html: {class: "simple-form input-field", data: {controller:"chat"}} do |f| %>
@@ -44,6 +44,7 @@
     <%= f.button :submit, class:"submit-btn d-none" %>
 <% end %>
 </div>
+</section>
 
 
 
