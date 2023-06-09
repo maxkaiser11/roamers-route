@@ -6,39 +6,37 @@
 
     <div class="message-container">
       <div class="bot-message">
-        <%= f.label :destination, 'Hello, I am your personal itinerary planner!', class:"chat-label ai-greet" %>
-        <%= f.label :destination, 'Where do you want to go?', class:"chat-label" %>
+        <p class="triangle-ai"><%= f.label :destination, 'Hello, I am your personal itinerary planner!', class:"chat-label ai-greet" %></p>
+        <p class="triangle-ai"><%= f.label :destination, 'Where do you want to go?', class:"chat-label" %></p>
       </div>
-      <%= f.input :destination, class: "destination-field", label: false%>
+      <p class="triangle-user"><%= f.input :destination, class: "destination-field", label: false%></p>
     </div>
     <div class="message-container">
-      <%= f.label :budget, 'What is your budget per day (€) for this trip?', class:"chat-label" %>
-      <%= f.input :budget, class: "budget-field", label: false %>
-    </div>
-
-    <div class="message-container">
-      <%= f.label :group_size, 'Including you, how many people are going?', class:"chat-label"%>
-      <%= f.input :group_size, class: "group-size-field", label: false %>
+      <p class="triangle-ai"><%= f.label :budget, 'What is your budget per day (€) for this trip?', class:"chat-label" %></p>
+      <p class="triangle-user"><%= f.input :budget, class: "budget-field", label: false %></p>
     </div>
 
     <div class="message-container">
-      <%= f.label :interests, 'What do you plan to do on during the trip?', class:"chat-label" %>
-      <%= f.input :interests, class: "interests-field", label: false %>
+      <p class="triangle-ai"><%= f.label :group_size, 'Including you, how many people are going?', class:"chat-label"%></p>
+      <p class="triangle-user"><%= f.input :group_size, class: "group-size-field", label: false %></p>
     </div>
 
     <div class="message-container">
-      <%= f.label :starts_on, 'For how long would you like to go?', class:"chat-label" %>
+      <p class="triangle-ai"><%= f.label :interests, 'What do you plan to do on during the trip?', class:"chat-label" %></p>
+      <p class="triangle-user"><%= f.input :interests, class: "interests-field", label: false %></p>
+    </div>
+
+    <div class="message-container">
+      <p class="triangle-ai"><%= f.label :starts_on, 'For how long would you like to go?', class:"chat-label" %></p>
       <div class="dates">
-        <div class="inputs">
           <h5 class="date-text">Arrival:</h5>
           <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
-            <%= f.input :starts_on, as: :date, html5: true, class: "starts-on-field", label: false,  id: "starts-on" %>
+            <p class="triangle-user"><%= f.input :starts_on, as: :date, html5: true, class: "starts-on-field", label: false,  id: "starts-on" %></p>
           </div>
           <h5 class="date-text">Departure:</h5>
           <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
-            <%= f.input :ends_on, as: :date, html5: true, class: "ends-on-field", label: false,  id: "ends-on" %>
+            <p class="triangle-user"><%= f.input :ends_on, as: :date, html5: true, class: "ends-on-field", label: false,  id: "ends-on" %></p>
           </div>
-        </div>
       </div>
     </div>
     <%= f.button :submit, class:"submit-btn d-none" %>
@@ -61,7 +59,7 @@
     //const dates = document.querySelectorAll(".trip_starts_on, .trip_ends_on");
     const dateEndInput = document.getElementById("trip_ends_on");
     const dateStartInput = document.getElementById("trip_starts_on");
-    const inputs = document.querySelectorAll(".form-control, .trip_starts_on>div, .trip_ends_on>div");
+    const inputs = document.querySelectorAll(".form-control, .trip_starts_on>div, .trip_ends_on>div, .triangle-ai,. triangle-user");
     const submitBtn = document.querySelector(".submit-btn");
 
     document.addEventListener("DOMContentLoaded", function() {

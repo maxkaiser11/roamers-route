@@ -4,13 +4,17 @@
 
 .chat-section {
   min-height: 95vh;
+  background-color: rgba(170, 170, 170, 0.219);
+  color: #000000;
+  border-radius: 10px;
+  margin: 50px;
 }
 
 #new_trip .form-control {
   width: 10em;
   padding-right: 20px;
   box-sizing: border-box;
-  border-radius: 20px;
+
 }
 
 
@@ -37,7 +41,6 @@
 }
 
 .chat-box .mb-3 {
-  overflow: auto;
   display: flex;
 }
 
@@ -45,9 +48,23 @@
   width: fit-content;
   background-color: rgba(255, 106, 0, 0.556);
   padding: 10px;
-  border-radius: 500px;
+  padding-left: 10px;
+  // box-shadow: rgba(0, 0, 0, 0.24) 3px 0px 8px;
+  // clip-path: inset(-10px -10px -10px 0px);
+  border-radius: 2px;
+  border-bottom-left-radius: 0px 0px;
 
 }
+
+#new_trip #trip_starts_on, #new_trip #trip_ends_on {
+  background: transparent;
+}
+
+.trip_starts_on, .trip_ends_on {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 
 #new_trip input {
   max-width: 300px;
@@ -60,7 +77,65 @@
   border: none;
   text-align: right;
   background-clip: padding-box;
+  border-radius: 3px;
+  border-bottom-right-radius: 0px 0px;
+
 }
+
+.triangle-ai {
+	// layout
+	position: relative;
+  margin-left: 1px;
+}
+
+.triangle-ai::before {
+  /* layout */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 2.65rem;
+  right: 100%;
+  margin-top: -0.41rem; /* Metade do valor da altura do triângulo (ajuste conforme necessário) */
+  border: .5rem solid transparent;
+  border-right: none;
+  border-top: none;
+  margin-left: 1px;
+
+  /* aparência */
+  border-bottom-color: rgba(255, 106, 0, 0.556); /* Cor do triângulo */
+  filter: drop-shadow(-0.0625rem 0 0.0625rem rgba(0, 0, 0, .1));
+}
+
+.message-container .triangle-user {
+	// layout
+	position: relative;
+  margin-left: 1px;
+  margin-bottom: 0;
+}
+
+.triangle-user::before {
+  /* layout */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 3.8rem;
+  right: -0.5px;
+  margin-top: -0.375rem; /* Metade do valor da altura do triângulo (ajuste conforme necessário) */
+  margin-bottom: 1rem;
+  border: .7rem solid transparent;
+  border-right: none;
+  border-bottom: none;
+
+  /* aparência */
+  border-left-color:  rgba(255, 138, 54, 0.359); /* Cor do triângulo */
+  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+
+}
+
+
+
 
 #new_trip #trip-starts-on {
   width: 100%;
@@ -75,11 +150,12 @@
 }
 
 
-
 .background-date{
   height:36px;
   background-color: rgba(255, 138, 54, 0.359);
-  border-radius: 300px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .bot-message{
@@ -120,36 +196,11 @@
   align-items: flex-end;
 }
 
+.dates-trip {
+  overflow: visible;
+}
+
 .date-text {
   text-align: left;
   margin-bottom: 0px;
-}
-
-.inputs {
-  width: fit-content;
-  margin-top: 20px;
-  ::-webkit-datetime-edit{
-    border-radius: 300px;
-  }
-  ::-webkit-datetime-edit-fields-wrapper{
-    border-radius: 300px;
-  }
-  ::-webkit-datetime-edit-text{
-
-  }
-  ::-webkit-datetime-edit-month-field{
-
-  }
-  ::-webkit-datetime-edit-day-field{
-
-  }
-  ::-webkit-datetime-edit-year-field{
-
-  }
-  ::-webkit-inner-spin-button{
-
-  }
-  ::-webkit-calendar-picker-indicator{
-
-  }
 }
