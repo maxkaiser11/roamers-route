@@ -15,11 +15,11 @@
 </div>
 
 <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <div class="offcanvas-header">
+  <div class="offcanvas-header menu-header">
     <h5 class="offcanvas-title nav-link" id="offcanvasWithBothOptionsLabel">Menu</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body d-flex flex-column align-items-center">
+  <div class="offcanvas-body d-flex flex-column align-items-center menu-body">
     <% if user_signed_in? %>
         <%= link_to "Planner", new_trip_path, class: "nav-link mb-4" %>
         <%= link_to "My Trips", trips_path , class: "nav-link mb-4" %>
