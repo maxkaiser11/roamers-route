@@ -1,6 +1,6 @@
-<div class="container markdown">
+<div class="container markdown mw-100">
   <div class="markdown-body vh-100">
-    <% if @trip.response.blank? %>
+    <% if @trip.response.blank? || @trip.updated? == false %>
       <div class="wrap" data-controller="reload">
         <div class="loading">
           <div class="bounceball"></div>
@@ -8,11 +8,11 @@
         </div>
       </div>
     <% else %>
-    <div class="timeline">
+    <section>
       <%= markdown(@trip.response) %>
       <%= link_to 'Edit Trip', edit_trip_path, class: "button" %>
       <%= link_to 'Delete Trip', delete_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "button" %>
-    </div>
+    </section>
     <% end %>
   </div>
 </div>
