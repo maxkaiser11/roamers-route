@@ -16,3 +16,4 @@ class FetchTripDetailsJob < ApplicationJob
     end
   end
 end
+
