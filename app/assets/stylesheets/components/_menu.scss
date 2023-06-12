@@ -1,7 +1,12 @@
-.menu-body {
-  background-color: #ff451c;
+.offcanvas {
+  background-color:rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
 }
 
-.menu-header {
-  background-color: #ff451c;
+.offcanvas-backdrop {
+  background-color:rgba(255, 255, 255, 0);
+}
+
+.offcanvas.offcanvas-end {
+  border-left: none;
 }
