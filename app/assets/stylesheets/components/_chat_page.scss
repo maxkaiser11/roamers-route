@@ -3,11 +3,30 @@
 }
 
 .chat-section {
-  min-height: 95vh;
-  background-color: rgba(170, 170, 170, 0.219);
+
   color: #000000;
-  border-radius: 10px;
-  margin: 50px;
+  background: url("chatbackgroundv.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  min-height: 100vh;
+  margin-top: -90px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 70%;
+  margin-top: 90px;
+
+}
+.background-img {
+
 }
 
 #new_trip .form-control {
@@ -18,13 +37,6 @@
 }
 
 
-.chat-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-}
 
 #new_trip{
   width: 70%;
@@ -46,7 +58,9 @@
 
 .chat-label {
   width: fit-content;
-  background-color: rgba(255, 106, 0, 0.556);
+  //background-color: rgba(255, 106, 0, 0.556);
+  background-color:rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
   padding: 10px;
   padding-left: 10px;
   // box-shadow: rgba(0, 0, 0, 0.24) 3px 0px 8px;
@@ -73,7 +87,7 @@
   margin-right: 10px;
   height: 36px;
   margin-left: auto;
-  background-color: rgba(255, 138, 54, 0.359);
+  background-color:rgba(255, 255, 255, 0.25);
   border: none;
   text-align: right;
   background-clip: padding-box;
@@ -103,7 +117,8 @@
   margin-left: 1px;
 
   /* aparência */
-  border-bottom-color: rgba(255, 106, 0, 0.556); /* Cor do triângulo */
+  border-bottom-color: rgba(255, 255, 255, 0.25);/* Cor do triângulo */;
+  backdrop-filter: blur(15px);
   filter: drop-shadow(-0.0625rem 0 0.0625rem rgba(0, 0, 0, .1));
 }
 
@@ -129,7 +144,8 @@
   border-bottom: none;
 
   /* aparência */
-  border-left-color:  rgba(255, 138, 54, 0.359); /* Cor do triângulo */
+  border-left-color:  rgba(255, 255, 255, 0.25); /* Cor do triângulo */
+  backdrop-filter: blur(15px);
   filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
 
 }
@@ -152,7 +168,8 @@
 
 .background-date{
   height:36px;
-  background-color: rgba(255, 138, 54, 0.359);
+  background-color:rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
   border-radius: 3px;
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -169,7 +186,7 @@
 
 
 #new_trip input:focus{
-  background-color: rgba(255, 138, 54, 0.359);
+  background-color:rgba(255, 255, 255, 0.25);
 }
 
 

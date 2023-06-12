@@ -1,48 +1,48 @@
 
-<section class="chat-section">
-<div class="container chat-box">
-  <h1 class="form-header">New Trip</h1>
-  <%= simple_form_for @trip, html: {class: "simple-form input-field", data: {controller:"chat"}} do |f| %>
+  <section class="chat-section">
+  <div class="container chat-box">
+    <h1 class="form-header">New Trip</h1>
+      <%= simple_form_for @trip, html: {class: "simple-form input-field", data: {controller:"chat"}} do |f| %>
 
-    <div class="message-container">
-      <div class="bot-message">
-        <p class="triangle-ai"><%= f.label :destination, 'Hello, I am your personal itinerary planner!', class:"chat-label ai-greet" %></p>
-        <p class="triangle-ai"><%= f.label :destination, 'Where do you want to go?', class:"chat-label" %></p>
-      </div>
-      <p class="triangle-user"><%= f.input :destination, class: "destination-field", label: false%></p>
-    </div>
-    <div class="message-container">
-      <p class="triangle-ai"><%= f.label :budget, 'What is your budget per day (€) for this trip?', class:"chat-label" %></p>
-      <p class="triangle-user"><%= f.input :budget, class: "budget-field", label: false %></p>
-    </div>
-
-    <div class="message-container">
-      <p class="triangle-ai"><%= f.label :group_size, 'Including you, how many people are going?', class:"chat-label"%></p>
-      <p class="triangle-user"><%= f.input :group_size, class: "group-size-field", label: false %></p>
-    </div>
-
-    <div class="message-container">
-      <p class="triangle-ai"><%= f.label :interests, 'What do you plan to do during the trip?', class:"chat-label" %></p>
-      <p class="triangle-user"><%= f.input :interests, class: "interests-field", label: false %></p>
-    </div>
-
-    <div class="message-container">
-      <p class="triangle-ai"><%= f.label :starts_on, 'For how long would you like to go?', class:"chat-label" %></p>
-      <div class="dates">
-          <h5 class="date-text">Arrival:</h5>
-          <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
-            <%= f.input :starts_on, as: :date, html5: true, class: "starts-on-field", label: false,  id: "starts-on" %>
+        <div class="message-container">
+          <div class="bot-message">
+            <p class="triangle-ai"><%= f.label :destination, 'Hello, I am your personal itinerary planner!', class:"chat-label ai-greet" %></p>
+            <p class="triangle-ai"><%= f.label :destination, 'Where do you want to go?', class:"chat-label" %></p>
           </div>
-          <h5 class="date-text">Departure:</h5>
-          <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
-            <%= f.input :ends_on, as: :date, html5: true, class: "ends-on-field", label: false,  id: "ends-on" %>
+          <p class="triangle-user"><%= f.input :destination, class: "destination-field", label: false%></p>
+        </div>
+        <div class="message-container">
+          <p class="triangle-ai"><%= f.label :budget, 'What is your budget per day (€) for this trip?', class:"chat-label" %></p>
+          <p class="triangle-user"><%= f.input :budget, class: "budget-field", label: false %></p>
+        </div>
+
+        <div class="message-container">
+          <p class="triangle-ai"><%= f.label :group_size, 'Including you, how many people are going?', class:"chat-label"%></p>
+          <p class="triangle-user"><%= f.input :group_size, class: "group-size-field", label: false %></p>
+        </div>
+
+        <div class="message-container">
+          <p class="triangle-ai"><%= f.label :interests, 'What do you plan to do during the trip?', class:"chat-label" %></p>
+          <p class="triangle-user"><%= f.input :interests, class: "interests-field", label: false %></p>
+        </div>
+
+        <div class="message-container">
+          <p class="triangle-ai"><%= f.label :starts_on, 'For how long would you like to go?', class:"chat-label" %></p>
+          <div class="dates">
+              <h5 class="date-text">Arrival:</h5>
+              <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
+                <%= f.input :starts_on, as: :date, html5: true, class: "starts-on-field", label: false,  id: "starts-on" %>
+              </div>
+              <h5 class="date-text">Departure:</h5>
+              <div class="background-date required trip_starts_on d-flex justify-content-end dates-trip">
+                <%= f.input :ends_on, as: :date, html5: true, class: "ends-on-field", label: false,  id: "ends-on" %>
+              </div>
           </div>
-      </div>
-    </div>
-    <%= f.button :submit, class:"submit-btn d-none" %>
-<% end %>
-</div>
-</section>
+        </div>
+        <%= f.button :submit, class:"submit-btn d-none" %>
+      <% end %>
+  </div>
+  </section>
 
 
 
