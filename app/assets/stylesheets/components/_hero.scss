@@ -54,23 +54,23 @@
   font-size: 15px;
   height: 45px;
   width: 150px;
- }
+  }
 
- .homepage-btn:disabled {
+.homepage-btn:disabled {
   pointer-events: none;
- }
+}
 
- .homepage-btn:hover {
+.homepage-btn:hover {
   color: #fff;
   background-color: #ff451c;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
- }
+  }
 
- .homepage-btn:active {
+.homepage-btn:active {
   box-shadow: none;
   transform: translateY(0);
- }
+  }
 
 .header {
   text-align: left;
@@ -105,6 +105,9 @@
   width: 150px;
 }
 
+.hero-btn:hover {
+  transform: translateY(-2px);
+}
 
 .hero-btn span {
   display: block;
