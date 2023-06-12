@@ -1,6 +1,6 @@
 <div class="container markdown">
   <div class="markdown-body vh-100">
-    <% if @trip.response.blank? %>
+    <% if @trip.response.blank? || @trip.updated? == false %>
       <div class="wrap" data-controller="reload">
         <div class="loading">
           <div class="bounceball"></div>
