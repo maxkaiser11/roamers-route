@@ -1,36 +1,20 @@
-.timeline {
- //comment
-}
-
 .markdown {
   background-image: url("123");
   background-size: cover;
   background-position: center;
-  overflow: auto;
+  margin-top: -90px;
 }
 
 .markdown-body {
-
   background-color: inherit;
-  // Timeline styles
   position: relative;
   max-width: 800px; /* Adjust the width as needed */
   margin: 0 auto;
-  padding: 20px;
-  // border-left: 2px solid #ccc; /* Vertical line color */
-  // border-right: 2px solid #ccc;
-
-
-  // position: relative;
-  // width: 100%;
-  // min-height: 100vh;
-  // box-sizing: border-box;
-  // padding-bottom: 50px; /* Adjust the value based on your footer's height */
-
+  padding: 90px 20px 20px 20px;
 }
 
 .markdown-body table{
-  width:50%;
+  width:100%;
   table-layout: fixed;
   background-color:rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(15px);
@@ -61,10 +45,6 @@
 
 .markdown-body h1{
   display: none;
-  // font-size: 18px;
-  // text-transform: uppercase;
-  // font-weight: 300;
-  // margin: 5px;
 }
 .markdown-body h2 {
   margin-bottom: 0;
@@ -87,6 +67,10 @@
   background-color:rgba(255, 255, 255, .25);
   font-family: 'Roboto', sans-serif;
   backdrop-filter: blur(15px);
+}
+
+.markdown-body p {
+  color: #fff;
 }
 /* demo styles */
 
