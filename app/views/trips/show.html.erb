@@ -6,7 +6,11 @@
            data-reload-trip-id-value="<%= @trip.id %>">
         <div class="loading">
           <div class="bounceball"></div>
-          <div class="text">CREATING YOUR ITINERARY</div>
+          <% if @trip.response.blank? %>
+            <div class="text">CREATING YOUR ITINERARY</div>
+          <% else %>
+            <div class="text">UPDATING YOUR ITINERARY</div>
+          <% end %>
         </div>
       </div>
     <% else %>
