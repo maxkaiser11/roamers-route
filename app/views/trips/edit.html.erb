@@ -1,10 +1,24 @@
-
-<div class="container">
-  <h1>Edit your trip</h1>
-
-  <%= simple_form_for @trip, html: {class: "simple-form"} do |f| %>
-      <%= f.label :trip_changes, "Tell us what you would like to change" %>
-      <%= f.input :trip_changes, input_html: {value: ''} %>
-      <%= f.submit "Update", class: "button" %>
-  <% end %>
+<div class="edit-background">
+  <div class="container edit-container">
+    <h1>Edit your trip</h1>
+    <div class="edit-field">
+      <%= simple_form_for @trip, html: {class: "simple-form edit-chat"} do |f| %>
+          <p class="triangle-ai"><%= f.label :trip_changes, "What do you want to change in your trip?" %></p>
+           <p class="triangle-user"><%= f.input :trip_changes, input_html: {value: ''},  label: false, id: "edit-input"%></p>
+          <%= f.submit "Update", class: "button submit-btn" %>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+<script>
+  function focusOnField() {
+    document.addEventListener("DOMContentLoaded", function() {
+      var editInput = document.getElementById("trip_trip_changes");
+
+      editInput.focus();
+    });
+  };
+
+  focusOnField();
+</script>
