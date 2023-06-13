@@ -1,0 +1,129 @@
+.edit-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("editbackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+  margin-top: -88px;
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.edit-container {
+  margin-top: 20px;
+}
+
+.edit-field {
+  // background-color:rgba(255, 255, 255, .25);
+  // backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 90px;
+}
+
+.edit-chat label {
+  background-color:rgba(255, 255, 255, .25);
+  backdrop-filter: blur(15px);
+  padding: 10px;
+  padding-left: 10px;
+  border-radius: 2px;
+  border-bottom-left-radius: 0px 0px;
+}
+
+.edit-chat input {
+  max-width: 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  height: 36px;
+  margin-left: auto;
+  background-color:rgba(255, 255, 255, 0.3);
+  border: none;
+  text-align: right;
+  background-clip: padding-box;
+  border-radius: 3px;
+  border-bottom-right-radius: 0px 0px;
+}
+
+.edit-chat input:focus{
+  background-color:rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.triangle-ai {
+	// layout
+	position: relative;
+  margin-left: 1px;
+}
+
+.triangle-ai::before {
+  /* layout */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 43px;
+  right: 100%;
+  margin-top: -0.41rem; /* Metade do valor da altura do triângulo (ajuste conforme necessário) */
+  border: .5rem solid transparent;
+  border-right: none;
+  border-top: none;
+  margin-left: 1px;
+
+  /* aparência */
+  border-bottom-color: rgba(255, 255, 255, 0.25);/* Cor do triângulo */;
+  backdrop-filter: blur(15px);
+  filter: drop-shadow(-0.0625rem 0 0.0625rem rgba(0, 0, 0, .1));
+}
+
+
+.edit-field .triangle-user {
+	// layout
+	position: relative;
+  margin-left: 1px;
+  margin-bottom: 0;
+}
+
+.edit-field .triangle-user::before {
+  /* layout */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 45.5px;
+  right: -1px;
+  margin-top: -0.375rem; /* Metade do valor da altura do triângulo (ajuste conforme necessário) */
+  margin-bottom: 1rem;
+  border: .7rem solid transparent;
+  border-right: none;
+  border-bottom: none;
+
+  /* aparência */
+  border-left-color:  rgba(255, 255, 255, 0.3); /* Cor do triângulo */
+  backdrop-filter: blur(15px);
+  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+
+}
+
+.edit-chat .submit-btn{
+  background-color: #ff451c !important;
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px !important;
+  //background-color: white !important;
+  //color: black;
+  width: fit-content !important;
+
+}
