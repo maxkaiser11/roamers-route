@@ -80,10 +80,20 @@
   // width: 600px;
 }
 
+
 .hero-text {
   width: 400px;
   // text-align: justify;
   font-size: 18px;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .content {
+    margin-left: -128px;
+  }
 }
 
 
