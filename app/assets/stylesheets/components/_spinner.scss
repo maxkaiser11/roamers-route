@@ -1,8 +1,8 @@
 @import  url(https://fonts.googleapis.com/css?family=Montserrat);
 
 // ボールのサイズ
-$width: 15px;
-$height: 15px;
+$width: 18px;
+$height: 18px;
 
 // バウンドの距離
 $bounce_height: 30px;
@@ -22,9 +22,10 @@ $bounce_height: 30px;
 }
 
 .text {
-  color: #fbae17;
+  color: #523f97;
   display: inline-block;
   margin-left: 5px;
+  font-size: 24px;
 }
 
 .bounceball {
@@ -40,7 +41,7 @@ $bounce_height: 30px;
     width: $width;
     height: $height;
     border-radius: 50%;
-    background-color: #fbae17;
+    background-color: #523f97;
     transform-origin: 50%;
     animation: bounce 500ms alternate infinite ease;
   }
