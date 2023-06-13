@@ -8,7 +8,8 @@ export default class extends Controller {
   connect() {
     console.log(this.tripIdValue)
     this.channel = createConsumer().subscriptions.create(
-        { channel: "TripChannel", id: this.tripIdValue },
-        { received: data => location.reload() }
+        {channel: "TripChannel", id: this.tripIdValue},
+        {received: data => location.reload()}
     )
   }
+}
