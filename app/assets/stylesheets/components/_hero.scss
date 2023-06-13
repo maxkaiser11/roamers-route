@@ -8,7 +8,7 @@
   background-size: cover;
   background-position: center;
   // position: absolute;
-  width: 100%;
+  //width: 100%;
   z-index: -1;
 }
 
@@ -22,7 +22,7 @@
 
 .buttons {
   display: flex;
-  width: 400px;
+  //width: 400px;
   align-items: end;
   height: 50px;
 }
@@ -75,25 +75,16 @@
 .header {
   text-align: left;
   // position: relative;
-  margin-left: 150px;
+  //margin-left: 150px;
   color: #fff7ed;
   // width: 600px;
 }
 
 
 .hero-text {
-  width: 400px;
+  //width: 400px;
   // text-align: justify;
   font-size: 18px;
-}
-
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 480px)
-and (-webkit-min-device-pixel-ratio: 2) {
-  .content {
-    margin-left: -128px;
-  }
 }
 
 
@@ -112,7 +103,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.2s;
-  width: 150px;
+  //width: 150px;
 }
 
 .hero-btn:hover {
