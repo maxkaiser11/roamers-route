@@ -3,7 +3,7 @@
     <%= render "shared/navbar" %>
   <% end %>
 <% end %>
-<div class="login-background">
+<div class="login-background vh-100">
   <div class="container d-flex flex-column align-items-center">
     <h2 class="mt-3">Log in</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "simple-form" }, data: { turbo: :false }) do |f| %>
