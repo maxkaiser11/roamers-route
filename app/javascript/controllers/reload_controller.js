@@ -12,4 +12,3 @@ export default class extends Controller {
         { received: data => location.reload() }
     )
   }
-}

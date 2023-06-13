@@ -23,8 +23,6 @@ class TripsController < ApplicationController
     authorize @trip
 
     if @trip.save
-      TripChannel.broadcast_to(@trip, "hey")
-      FetchTripDetailsJob.perform_later(@trip)
       redirect_to trip_path(@trip)
     else
       render :new, status: :unprocessable_entity
